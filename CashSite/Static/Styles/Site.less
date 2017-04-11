@@ -1,0 +1,214 @@
+﻿@colorWhite: #FFFFFF;
+
+@colorDarkBlue: #23395B;
+@colorBlue: #406E8E;
+
+@colorLightGreen: #25A50A;
+@colorGreen: #178200;
+
+@colorRed: red;
+
+@colorGray: #bbbbbb;
+@colorLightGray: #cccccc;
+
+@colorText: #161925;
+
+.clearfix() {
+    *zoom: 1;
+
+    &:before,
+    &:after {
+        display: table;
+        line-height: 0;
+        content: "";
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+.mobile(@ruleset) {
+    @media screen and (max-width: 800px) { @ruleset(); }
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+    color: @colorText;
+    line-height: 20px;
+}
+
+.navbar {
+    background-color: @colorDarkBlue;
+    color: @colorWhite;
+
+    .navbar-header {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+
+        a:link, a:visited {
+            color: @colorWhite;
+            padding: 20px 25px;
+            text-align: center; 
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        a:hover, a:active, a.current {
+            background-color: @colorBlue;
+        }
+
+        a {
+            color: @colorWhite;
+        }
+    }
+}
+
+.title {
+     margin-top: 0;
+}
+
+.body-content {
+    min-height: 100%;
+    margin-bottom: -150px;
+}
+
+.push {
+    height: 150px;
+}
+
+.footer {
+    height: 150px;
+    background-color: @colorDarkBlue;
+
+    .footer-content {
+        margin-left: 415px;
+    }
+}
+
+.body-content {
+    padding: 15px 15px;
+}
+
+.sidebar-right {
+    width: 35%;
+    float: right;
+    border: 1px solid gray;
+
+    .sidebar-content {
+        padding: 15px;
+    }
+
+    .mobile({
+        width: auto;
+        float: none;
+    });
+}
+
+.main {
+    width: 60%;
+    float: left;
+
+    .mobile({
+        width: auto;
+        float: none;
+    });
+}
+
+/* Set padding to keep content from hitting the edges */
+.container {
+    max-width: 1150px;
+    /*margin-left: 385px;*/
+
+    margin-left: auto;
+    margin-right: auto;
+
+    .clearfix();
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    font-size: 16px;
+    border: 1px solid @colorLightGray;
+
+    &:focus {
+        outline: none;
+        border-color: @colorBlue;
+    }
+
+    &.input-validation-error{
+        border-color: @colorRed;
+    }
+}
+
+textarea {
+    height: 135px;
+}
+
+.c-button {
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    color: @colorWhite;
+    background-color: @colorGreen;
+    padding: 12px 18px;
+    display: inline-block;
+    border-radius: 5px;
+
+    &:hover {
+        background-color: @colorLightGreen;
+    }
+}
+
+.c-form {
+    input, select, textarea {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 5px 10px;
+        line-height: 26px;
+    }
+
+    label {
+        display: inline-block;
+        padding: 5px 0;
+    }
+
+    .field, .actions {
+        margin-bottom: 25px;
+    }
+
+    .actions {
+        .clearfix();
+
+        .c-button {
+            width: 50%;
+            float: right;
+        }
+    }
+}
+
+.banner {
+    text-align: center;
+    margin-top: 45px;
+    margin-bottom: 60px;
+    padding-bottom: 15px;
+
+    border-bottom: 1px solid @colorGray;
+
+    p {
+        margin-bottom: 0;
+    }
+
+    .actions {
+        margin: 30px 0 15px 0;
+    }
+}

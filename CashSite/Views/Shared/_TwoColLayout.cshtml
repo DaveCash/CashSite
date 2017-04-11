@@ -1,0 +1,17 @@
+﻿@{
+    Layout = "_Layout.cshtml";
+}
+
+@RenderSection("top", false)
+
+<div class="main">
+    <h1>@ViewBag.Title</h1>
+
+    @RenderSection("main", true)
+</div>
+
+<div class="sidebar sidebar-right">
+    <div class="sidebar-content">
+        @RenderSection("sidebarRight", false)
+    </div>
+</div>

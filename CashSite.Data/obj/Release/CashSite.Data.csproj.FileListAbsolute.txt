@@ -1,0 +1,10 @@
+F:\VisStudio\CashSite\CashSite.Data\bin\Release\CashSite.Data.dll.config
+F:\VisStudio\CashSite\CashSite.Data\bin\Release\CashSite.Data.dll
+F:\VisStudio\CashSite\CashSite.Data\bin\Release\CashSite.Data.pdb
+F:\VisStudio\CashSite\CashSite.Data\bin\Release\EntityFramework.dll
+F:\VisStudio\CashSite\CashSite.Data\bin\Release\EntityFramework.SqlServer.dll
+F:\VisStudio\CashSite\CashSite.Data\bin\Release\EntityFramework.xml
+F:\VisStudio\CashSite\CashSite.Data\bin\Release\EntityFramework.SqlServer.xml
+F:\VisStudio\CashSite\CashSite.Data\obj\Release\CashSite.Data.csprojResolveAssemblyReference.cache
+F:\VisStudio\CashSite\CashSite.Data\obj\Release\CashSite.Data.dll
+F:\VisStudio\CashSite\CashSite.Data\obj\Release\CashSite.Data.pdb

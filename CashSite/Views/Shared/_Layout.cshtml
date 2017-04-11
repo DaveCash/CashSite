@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/Static/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <script src="~/Static/lib/modernizr-2.6.2.js"></script>
+    <script src="~/Static/lib/jquery-1.10.2.min.js"></script>
+    <script src="~/Static/lib/bootstrap.min.js"></script>
+    @Scripts.Render("~/bundles/jqueryval")
+
+</head>
+@functions {
+    string GetClass(string action, string controller)
+    {
+        if (ViewBag?.Action == action && ViewBag?.Controller == controller)
+            return "current";
+
+        return "";
+    }
+}
+<body>
+    <div class="navbar">
+        <div class="navbar-header">
+            @Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = GetClass("Index", "Home") })
+            @Html.ActionLink("Controller", "Index", "Home", new { area = "" }, new { @class = "" })
+            @Html.ActionLink("A longer section name", "Index", "Home", new { area = "" }, new { @class = "" })
+            @Html.ActionLink("Profile page", "Index", "Home", new { area = "" }, new { @class = "" })
+            @Html.ActionLink("About me", "Index", "Home", new { area = "" }, new { @class = "" })
+            @Html.ActionLink("Forum", "Index", "Forum", new { area = "" }, new { @class = GetClass("Index", "Forum") })
+            @Html.ActionLink("Contact", "Index", "Contact", null, new { @class = GetClass("Index", "Contact") })
+        </div>
+    </div>
+
+    <div class="body-content">
+        <div class="container">
+            @RenderBody()
+        </div>
+        <div class="push"></div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+
+        </div>
+    </footer>
+</body>
+</html>

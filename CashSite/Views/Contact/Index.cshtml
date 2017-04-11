@@ -1,0 +1,45 @@
+﻿@model ContactFormViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@section main {
+    @if (Model != null && Model.RequestSent)
+    {
+        <div>
+            Success!
+        </div>
+    }
+    else
+    {
+        <div class="c-form">
+            @using (Html.BeginForm())
+            {
+                <div class="field">
+                    @Html.LabelFor(m => m.FirstName)
+                    @Html.TextBoxFor(m => m.FirstName)
+                </div>
+                <div class="field">
+                    @Html.LabelFor(m => m.LastName)
+                    @Html.TextBoxFor(m => m.LastName)
+                </div>
+                <div class="field">
+                    @Html.LabelFor(m => m.Email)
+                    @Html.TextBoxFor(m => m.Email)
+                </div>
+                <div class="field">
+                    @Html.LabelFor(m => m.Subject)
+                    @Html.TextBoxFor(m => m.Subject)
+                </div>
+                <div class="field">
+                    @Html.LabelFor(m => m.Message)
+                    @Html.TextAreaFor(m => m.Message)
+                </div>
+                <div class="actions">
+                    <input type="submit" class="c-button" />
+                </div>
+            }
+        </div>
+    }
+}

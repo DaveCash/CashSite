@@ -1,0 +1,40 @@
+﻿@model RegisterFormViewModel
+@{
+    ViewBag.Title = "Register";
+}
+
+<div class="main">
+    <h1>Register</h1>
+
+    <div class="c-form">
+        @using (Html.BeginForm())
+        {
+            @Html.ValidationSummary()
+
+            <div class="field">
+                @Html.LabelFor(m => m.Email)
+                @Html.TextBoxFor(m => m.Email)
+            </div>
+            <div class="field">
+                @Html.LabelFor(m => m.FirstName)
+                @Html.TextBoxFor(m => m.FirstName)
+            </div>
+            <div class="field">
+                @Html.LabelFor(m => m.LastName)
+                @Html.TextBoxFor(m => m.LastName)
+            </div>
+            <div class="field">
+                @Html.LabelFor(m => m.Password)
+                @Html.PasswordFor(m => m.Password)
+            </div>
+            <div class="field">
+                @Html.LabelFor(m => m.Password2)
+                @Html.PasswordFor(m => m.Password2)
+            </div>
+            <div class="actions">
+                <input type="submit" class="c-button" />
+            </div>
+        }
+    </div>
+</div>
+
